@@ -125,3 +125,5 @@
 //     return x1 * x2
 // })
 // console.log(result)
+
+// jai nepal
