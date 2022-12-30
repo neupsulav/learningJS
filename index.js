@@ -126,7 +126,7 @@
 // })
 // console.log(result)
 
-// chapter-6 practice set 
+// chapter-6 practice set
 // let age = prompt("Enter your age")
 // if (age >= 18) {
 //     alert("you can drive")
@@ -149,7 +149,7 @@
 // document.body.style.backgroundColor = mycolor
 
 
-// guess the number game 
+// guess the number game
 // var ran = Math.floor(Math.random() * 100)
 // var count = 0
 // var newnum
@@ -168,31 +168,36 @@
 //     count = count + 1
 // } while (num != ran)
 
-// Rock paper scissors game 
+// Rock paper scissors game
 
 
-do {
-    var randomNumber = Math.floor(Math.random() * 3)
-    var randomGuess
-    if (randomNumber == 0) {
-        randomGuess = 'R'
-    } else if (randomNumber == 1) {
-        randomGuess = 'P'
-    } else {
-        randomGuess = 'S'
-    }
+// do {
+//     var randomNumber = Math.floor(Math.random() * 3)
+//     var randomGuess
+//     if (randomNumber == 0) {
+//         randomGuess = 'R'
+//     } else if (randomNumber == 1) {
+//         randomGuess = 'P'
+//     } else {
+//         randomGuess = 'S'
+//     }
 
-    var guess = prompt("Rock(R), paper(P) or scissors(S)?")
-    if (guess == 'R' && randomGuess == 'S') {
-        alert(`You win. You = ${guess} computer = ${randomGuess}`)
-    } else if (guess == 'P' && randomGuess == 'R') {
-        alert(`You win. You = ${guess} computer = ${randomGuess}`)
-    } else if (guess == 'S' && randomGuess == 'P') {
-        alert(`You win. You = ${guess} computer = ${randomGuess}`)
-    } else if (guess == randomGuess) {
-        alert(`Draw. You = ${guess} computer = ${randomGuess}`)
-    } else {
-        alert(`You lose. You = ${guess} computer = ${randomGuess}`)
-    }
-    var wantToPlay = confirm("Do you want to play again?")
-} while (wantToPlay)
+//     var guess = prompt("Rock(R), paper(P) or scissors(S)?")
+//     if (guess == 'R' && randomGuess == 'S') {
+//         alert(`You win. You = ${guess} computer = ${randomGuess}`)
+//     } else if (guess == 'P' && randomGuess == 'R') {
+//         alert(`You win. You = ${guess} computer = ${randomGuess}`)
+//     } else if (guess == 'S' && randomGuess == 'P') {
+//         alert(`You win. You = ${guess} computer = ${randomGuess}`)
+//     } else if (guess == randomGuess) {
+//         alert(`Draw. You = ${guess} computer = ${randomGuess}`)
+//     } else {
+//         alert(`You lose. You = ${guess} computer = ${randomGuess}`)
+//     }
+//     var wantToPlay = confirm("Do you want to play again?")
+// } while (wantToPlay)
+
+
+// chapter-7 practice set 
+let nav = document.getElementById("navbar")
+nav.firstElementChild.firstElementChild.style.color = "red"
