@@ -198,6 +198,11 @@
 // } while (wantToPlay)
 
 
-// chapter-7 practice set 
-let nav = document.getElementById("navbar")
-nav.firstElementChild.firstElementChild.style.color = "red"
+// chapter-7 practice set
+// let nav = document.getElementById("navbar")
+// nav.firstElementChild.firstElementChild.style.color = "red"
+// let list = document.getElementsByTagName('li')
+// let arraylist = Array.from(list)
+// arraylist.forEach((element) => {
+//     element.style.backgroundColor = "cyan"
+// })
