@@ -140,10 +140,30 @@
 // }
 
 
-let num = prompt("Enter a number:")
-if (num > 4) {
-    location.href = "https://www.google.com/"
-}
+// let num = prompt("Enter a number:")
+// if (num > 4) {
+//     location.href = "https://www.google.com/"
+// }
 
 // let mycolor = prompt("Enter a color")
 // document.body.style.backgroundColor = mycolor
+
+
+// guess the number game 
+// var ran = Math.floor(Math.random() * 100)
+// var count = 0
+// var newnum
+// do {
+//     var num = prompt("Enter a number between 0-100:")
+//     num = Number.parseInt(num)
+//     if (num < ran) {
+//         alert("Your number is smaller")
+//     } else if (num > ran) {
+//         alert("Your number is greater")
+//     }
+//     else {
+//         let score = 100 - count
+//         alert("BOOM! number matched. Your score is " + score)
+//     }
+//     count = count + 1
+// } while (num != ran)
