@@ -126,6 +126,24 @@
 // })
 // console.log(result)
 
-// jai nepal
+// chapter-6 practice set 
+// let age = prompt("Enter your age")
+// if (age >= 18) {
+//     alert("you can drive")
+// } else {
+//     alert("you cannot drive")
+// }
 
-// sala prachanda chor 
+// let q1 = confirm("do you want to see the prompt again")
+// if (q1) {
+//     prompt("hehe i am back")
+// }
+
+
+let num = prompt("Enter a number:")
+if (num > 4) {
+    location.href = "https://www.google.com/"
+}
+
+// let mycolor = prompt("Enter a color")
+// document.body.style.backgroundColor = mycolor
