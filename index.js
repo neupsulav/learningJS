@@ -5,7 +5,6 @@
 
 // console.log(typeof (name + a))
 
-
 // const dict = {
 //     name: "sulav",
 //     faculty: 'csit',
@@ -15,7 +14,6 @@
 // console.log(dict.name)
 // dict.address = 'shitalnagar'
 // console.log(dict)
-
 
 // chapter 2
 // let age = 18;
@@ -139,7 +137,6 @@
 //     prompt("hehe i am back")
 // }
 
-
 // let num = prompt("Enter a number:")
 // if (num > 4) {
 //     location.href = "https://www.google.com/"
@@ -147,7 +144,6 @@
 
 // let mycolor = prompt("Enter a color")
 // document.body.style.backgroundColor = mycolor
-
 
 // guess the number game
 // var ran = Math.floor(Math.random() * 100)
@@ -169,7 +165,6 @@
 // } while (num != ran)
 
 // Rock paper scissors game
-
 
 // do {
 //     var randomNumber = Math.floor(Math.random() * 3)
@@ -197,7 +192,6 @@
 //     var wantToPlay = confirm("Do you want to play again?")
 // } while (wantToPlay)
 
-
 // chapter-7 practice set
 // let nav = document.getElementById("navbar")
 // nav.firstElementChild.firstElementChild.style.color = "red"
@@ -205,9 +199,9 @@
 // let arraylist = Array.from(list)
 // arraylist.forEach((element) => {
 //     element.style.backgroundColor = "cyan"
-// }) 
+// })
 
-// Exercise 3 Tell me a joke 
+// Exercise 3 Tell me a joke
 // let arr = [`I was going to tell a time traveling joke but you guys didn't like it..😜😜`,
 //     `What do you call a lazy kangaroo? A pouch potato..😜😜`,
 //     `I used to run a dating service for chickens but I was struggling to make hens meet..😜😜`,
@@ -282,24 +276,44 @@
 //     `What do you call a bear without any teeth? A gummy bear..😜😜`,
 //     `Why was the coach yelling at the vending machine? He wanted his quarter back..`];
 
-
 // const goBtn = () => {
 
 //     let randomNumber = Math.floor(Math.random() * (arr.length))
-//     // innerHTML ra outerHTML ma get element garnu pardaina 
+//     // innerHTML ra outerHTML ma get element garnu pardaina
 //     // let joke = document.getElementById('addTxt')
 //     addTxt.innerHTML = `"<i>${arr[randomNumber]}</i>"`
 // }
 
-
 //clock using JS
 
-setInterval(() => {
-    let a = new Date()
-    let h = a.getHours()
-    let m = a.getMinutes()
-    let s = a.getSeconds()
-    document.getElementById("hour").innerHTML = h
-    document.getElementById("min").innerHTML = m
-    document.getElementById("seconds").innerHTML = s
-}, 1000);
+// setInterval(() => {
+//     let a = new Date()
+//     let h = a.getHours()
+//     let m = a.getMinutes()
+//     let s = a.getSeconds()
+//     hour.innerHTML = h
+//     min.innerHTML = m
+//     seconds.innerHTML = s
+// }, 1000);
+
+//callback
+// Syncronous programming
+
+// callback and promises
+const loadscript = (src) => {
+  let p1 = new Promise((resolve, reject) => {
+    script = document.createElement("script");
+    script.src = src;
+    script.onload = () => {
+      resolve("Loaded");
+    };
+  });
+};
+
+loadscript(
+  "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+);
+
+p1.then((value) => {
+  alert("value");
+});
