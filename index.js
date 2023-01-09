@@ -300,20 +300,65 @@
 // Syncronous programming
 
 // callback and promises
-const loadscript = (src) => {
-  let p1 = new Promise((resolve, reject) => {
-    script = document.createElement("script");
+// const loadScript = async (src) => {
+//   return new Promise((resolve, reject) => {
+//     let script = document.createElement("script");
+//     script.src = src;
+//     script.onload = () => {
+//       resolve("Loaded");
+//     };
+//     document.body.append(script);
+//   });
+// };
+
+// const mains = async () => {
+//   let a = await loadScript(
+//     "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+//   );
+//   console.log(a);
+// };
+
+// mains();
+
+//error in promises
+const loadScript = async (src) => {
+  return new Promise((resolve, reject) => {
+    let info = notCheck(src);
+    if (!info) {
+      reject(new Error("script doesn't match"));
+    }
+    let script = document.createElement("script");
     script.src = src;
     script.onload = () => {
       resolve("Loaded");
     };
+    document.body.append(script);
   });
 };
 
-loadscript(
-  "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-);
+const notCheck = (src) => {
+  if (
+    (src =
+      "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js")
+  ) {
+    return true;
+  } else {
+    return false;
+  }
+};
 
-p1.then((value) => {
-  alert("value");
-});
+const mains = async () => {
+  let a = await loadScript(
+    "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+  );
+  console.log(a);
+  // try {
+  //   let a = await loadScript(
+  //     "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+  //   );
+  // } catch (e) {
+  //   console.log(e);
+  // }
+};
+
+mains();
