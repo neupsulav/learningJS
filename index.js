@@ -321,43 +321,138 @@
 // mains();
 
 //error in promises
-const loadScript = async (src) => {
+// const loadScript = async (src) => {
+//   return new Promise((resolve, reject) => {
+//     let script = document.createElement("script");
+//     script.src = src;
+//     script.onload = () => {
+//       resolve("Loaded");
+//     };
+//     if (!notCheck(src)) {
+//       reject(new Error("script doesn't match"));
+//     }
+//     document.body.append(script);
+//   });
+// };
+
+// const notCheck = (src) => {
+//   if (
+//     src ==
+//     "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+//   )
+//     return true;
+//   else
+//     return false;
+// };
+
+// const mains = async () => {
+//   // let a = await loadScript(
+//   //   "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+//   // );
+//   // console.log(a);
+//   try {
+//     let a = await loadScript(
+//       "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+//     );
+//     console.log(a);
+//   } catch (e) {
+//     console.log("This error has been handled");
+//   }
+// };
+
+// mains();
+
+
+//promises practice set last question
+
+// var p1 = async () => {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve("p1 is done")
+//     }, 1000);
+//   })
+// }
+// var p2 = async () => {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve("p2 is done")
+//     }, 2000);
+//   })
+// }
+// var p3 = async () => {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve("p3 is done")
+//     }, 3000);
+//   })
+// }
+// let result = async () => {
+//   console.time("run")
+//   let a1 = p1()
+//   let a2 = p2()
+//   let a3 = p3()
+
+//   let ourValue = await Promise.all([a1, a2, a3])
+//   console.log(ourValue)
+//   console.timeEnd("run")
+// }
+
+// result()
+
+//hackerman exercise
+let hack1 = () => {
   return new Promise((resolve, reject) => {
-    let script = document.createElement("script");
-    script.src = src;
-    script.onload = () => {
-      resolve("Loaded");
-    };
-    if (!notCheck(src)) {
-      reject(new Error("script doesn't match"));
-    }
-    document.body.append(script);
-  });
-};
+    setTimeout(() => {
+      resolve("Initializing Hack program")
+    }, 1000);
+  })
+}
+let hack2 = () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("Hacking falano's computer")
+    }, 1000);
+  })
+}
+let hack3 = () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("Accessing falano's database")
+    }, 1000);
+  })
+}
+let hack4 = () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("Accessing falano's facebook")
+    }, 1000);
+  })
+}
+let hack5 = () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("Hacking complete.....")
+    }, 1000);
+  })
+}
 
-const notCheck = (src) => {
-  if (
-    src ==
-    "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-  )
-    return true;
-  else
-    return false;
-};
+const hacker = async () => {
+  await hack1().then((value) => {
+    console.log(value)
+  })
+  await hack2().then((value) => {
+    console.log(value)
+  })
+  await hack3().then((value) => {
+    console.log(value)
+  })
+  await hack4().then((value) => {
+    console.log(value)
+  })
+  await hack5().then((value) => {
+    console.log(value)
+  })
 
-const mains = async () => {
-  // let a = await loadScript(
-  //   "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-  // );
-  // console.log(a);
-  try {
-    let a = await loadScript(
-      "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-    );
-    console.log(a);
-  } catch (e) {
-    console.log("This error has been handled");
-  }
-};
 
-mains();
+}
+hacker()
