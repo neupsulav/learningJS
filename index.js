@@ -400,59 +400,74 @@
 // result()
 
 //hackerman exercise
-let hack1 = () => {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve("Initializing Hack program")
-    }, 1000);
-  })
-}
-let hack2 = () => {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve("Hacking falano's computer")
-    }, 1000);
-  })
-}
-let hack3 = () => {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve("Accessing falano's database")
-    }, 1000);
-  })
-}
-let hack4 = () => {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve("Accessing falano's facebook")
-    }, 1000);
-  })
-}
-let hack5 = () => {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve("Hacking complete.....")
-    }, 1000);
-  })
-}
+// let hack1 = () => {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve("Initializing Hack program")
+//     }, 1000);
+//   })
+// }
+// let hack2 = () => {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve("Hacking falano's computer")
+//     }, 1000);
+//   })
+// }
+// let hack3 = () => {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve("Accessing falano's database")
+//     }, 1000);
+//   })
+// }
+// let hack4 = () => {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve("Accessing falano's facebook")
+//     }, 1000);
+//   })
+// }
+// let hack5 = () => {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve("Hacking complete.....")
+//     }, 1000);
+//   })
+// }
 
-const hacker = async () => {
-  await hack1().then((value) => {
-    console.log(value)
-  })
-  await hack2().then((value) => {
-    console.log(value)
-  })
-  await hack3().then((value) => {
-    console.log(value)
-  })
-  await hack4().then((value) => {
-    console.log(value)
-  })
-  await hack5().then((value) => {
-    console.log(value)
-  })
+// const hacker = async () => {
+//   await hack1().then((value) => {
+//     console.log(value)
+//   })
+//   await hack2().then((value) => {
+//     console.log(value)
+//   })
+//   await hack3().then((value) => {
+//     console.log(value)
+//   })
+//   await hack4().then((value) => {
+//     console.log(value)
+//   })
+//   await hack5().then((value) => {
+//     console.log(value)
+//   })
 
 
+// }
+// hacker()
+
+
+//API le dimag chatyo,tyo future ma kunai din sikinxa feri
+
+//LocalStorage and sessionStorage practice set
+
+let sn = prompt("Enter the serial number of the note:")
+let note = prompt("Enter your note:")
+document.write(`Your notes are: <br>`)
+localStorage.setItem(sn, note)
+for (i = 0; i < localStorage.length; i++) {
+  let keys = localStorage.key(i)
+  let items = localStorage.getItem(keys)
+  document.write(`${keys} ` + `${items}` + `<br>`)
 }
-hacker()
