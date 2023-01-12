@@ -462,12 +462,44 @@
 
 //LocalStorage and sessionStorage practice set
 
-let sn = prompt("Enter the serial number of the note:")
-let note = prompt("Enter your note:")
-document.write(`Your notes are: <br>`)
-localStorage.setItem(sn, note)
-for (i = 0; i < localStorage.length; i++) {
-  let keys = localStorage.key(i)
-  let items = localStorage.getItem(keys)
-  document.write(`${keys} ` + `${items}` + `<br>`)
+// let sn = prompt("Enter the serial number of the note:")
+// let note = prompt("Enter your note:")
+// document.write(`Your notes are: <br>`)
+// localStorage.setItem(sn, note)
+// for (i = 0; i < localStorage.length; i++) {
+//   let keys = localStorage.key(i)
+//   let items = localStorage.getItem(keys)
+//   document.write(`${keys} ` + `${items}` + `<br>`)
+// }
+
+// Object oriented programming 
+// password generator project 
+class password {
+  constructor(length) {
+    this.length = length
+    this.pass = ''
+  }
+
+  generatePassword() {
+    if (this.length < 3) {
+      console.log("Password should have length greater than 3")
+    }
+    else {
+      let i = 0
+      let characters = 'abcdefghijklmnopqrstuvwxyz'
+      let numbers = '1234567890'
+      let specialCharacters = "!@#$%^&*()_+-*/~`;:[{'?/,<>"
+      while (i < this.length) {
+        this.pass += characters[Math.floor(Math.random() * characters.length)]
+        this.pass += numbers[Math.floor(Math.random() * numbers.length)]
+        this.pass += specialCharacters[Math.floor(Math.random() * specialCharacters.length)]
+        i += 3
+      }
+      return this.pass.slice(0, this.length)
+    }
+  }
 }
+
+let num = prompt("Enter the length of password:")
+let passwordObj = new password(num)
+alert("Generated password is " + passwordObj.generatePassword())
